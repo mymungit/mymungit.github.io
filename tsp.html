@@ -1,1 +1,60 @@
-inilah tsp
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>index</title>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js'></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.3.1/cjs/react-dom-server.browser.development.js'></script>
+ <script src='app.js'></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js'></script>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+
+
+<form action="" method="post">
+	Tambahkan Kota dan Koordinat<br />
+	<input id="nama" type="text" name="city" />
+	<input id="koordinat" type="text" name="koordinat"
+	<p><a onClick={addCities()} class="btn btn-info" role="button">ADD</a> 
+	<p><a onClick={calculate()} class="btn btn-info" role="button">SOLVE</a></p>
+</form>
+<div id="content"> </div>
+	
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js'></script>
+ <script src='app.js'></script>
+ <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-core/6.1.19/browser.js'></script>
+ <script>
+	var arr = [];
+	var content="";
+	function once(){
+	 alert("once");
+	 var content = "<h1> oke oce my bro</h1>"
+	 document.getElementById("content").innerHTML = content;
+	}
+	function addCities(){
+		var nameValue = document.getElementById("nama").value;
+		var coorValue = document.getElementById("koordinat").value;
+		arr.push(nameValue);
+		content += "<p>"+nameValue+" "+"("+coorValue+")"+"<p>";
+		document.getElementById("content").innerHTML = content;
+		var nameValue = document.getElementById("nama").value=" ";
+		var coorValue = document.getElementById("koordinat").value=" ";
+	}
+	function calculate(){
+		console.log(arr);
+		alert("In your dream");
+	}
+ </script>
+</body>
+</html>
