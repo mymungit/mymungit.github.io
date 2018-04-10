@@ -22,13 +22,14 @@ var values;
 var fitnessValues;
 var roulette;
 var coordinate;
-
+var cities;
 
 
 $(function() {
   init();
   initData();
   points = data0;
+  cities = []
   $('#addPoint').click(function() {
     addPoints();
     $('#status').text("");
@@ -112,15 +113,17 @@ function addPoints() {
 	var coorValue = document.getElementById("koordinat").value;
 	c = coorValue.split(",")
 	points.push({"x":parseInt(c[0]),"y":parseInt(c[1])});
+	cities.push(nameValue)
 	var nameValue = document.getElementById("nama").value=" ";
 	var coorValue = document.getElementById("koordinat").value=" ";
 	console.log(points);
 		 
 }
-function drawCircle(point) {
+function drawCircle(city,point) {
   ctx.fillStyle   = '#000';
   ctx.beginPath();
   ctx.arc(point.x, point.y, 3, 0, Math.PI*2, true);
+  ctx.strokeText(city,point.x+3, point.y);
   ctx.closePath();
   ctx.fill();
 }
@@ -151,7 +154,7 @@ function draw() {
   clearCanvas();
   if (points.length > 0) {
     for(var i=0; i<points.length; i++) {
-      drawCircle(points[i]);
+      drawCircle(cities[i],points[i]);
     }
     if(best.length === points.length) {
       drawLines(best);
