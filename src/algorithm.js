@@ -192,7 +192,7 @@ function setBestValue() {
     UNCHANGED_GENS = 0;
   } else {
     UNCHANGED_GENS += 1;
-    if (UNCHANGED_GENS>10){
+    if (UNCHANGED_GENS>30){
 		alert('converged at '+ bestValue+' with '+mutationTimes+' mutation times');
 		running = false;
 	}
