@@ -113,7 +113,12 @@ function addPoints() {
 	var coorValue = document.getElementById("koordinat").value;
 	c = coorValue.split(",")
 	points.push({"x":parseInt(c[0]),"y":parseInt(c[1])});
-	cities.push(nameValue)
+	if(!nameValue){
+		cities.push("");
+	}else{
+		cities.push(nameValue)
+	}
+	
 	var nameValue = document.getElementById("nama").value=" ";
 	var coorValue = document.getElementById("koordinat").value=" ";
 	console.log(points);
@@ -123,6 +128,9 @@ function drawCircle(city,point) {
   ctx.fillStyle   = '#000';
   ctx.beginPath();
   ctx.arc(point.x, point.y, 3, 0, Math.PI*2, true);
+  if(!city){
+	  city = " ";
+  }
   ctx.strokeText(city,point.x+3, point.y);
   ctx.closePath();
   ctx.fill();
