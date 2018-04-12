@@ -1,7 +1,4 @@
 
-
-
-
 function solve(){
 	initData();
 	var jalur = [0];
