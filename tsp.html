@@ -8,11 +8,12 @@
 	<script type="text/javascript" src="./src/algorithm.js"></script>
 	<script type="text/javascript" src="./src/utils.js"></script>
 	<script type="text/javascript" src="./src/data.js"></script>
+	<script type="text/javascript" src="./src/greedy.js"></script>
     </head>
     <body>
 	<div class="container">
 	    <header>
-		<h1 id="title">Traveling Salesman Problem Using Genetic Algorithms</h1>
+		<h1 id="title">Traveling Salesman Problem Using Greedy and Genetic Algorithms</h1>
 	    </header>
 	    <div class="row-fluid">
 		<form action="" method="post">
@@ -22,7 +23,8 @@
 			<p><a id="addPoint" class="btn" role="button">ADD</a> 
 		</form>
 		<div id="control_bottons" class="btn-group row">
-		    <button id="start_btn" class="btn">Start/Restart</button>
+			<button id="start_greedy" class="btn">Greedy</button>
+		    <button id="start_btn" class="btn">Genetic</button>
 		    <button id="stop_btn" class="btn">Stop/Continue</button>
 		    <button id="clear_btn" class="btn">Clear All</button>
 		</div>
