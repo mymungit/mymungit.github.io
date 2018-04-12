@@ -1,6 +1,10 @@
 
 function solve(){
-	initData();
+	clearCanvas();
+	
+	for(var i=0; i<points.length; i++) {
+      		drawCircle(cities[i],points[i]);
+	}
 	var jalur = [0];
 	
 	for(var i=0;i<points.length;i++){
