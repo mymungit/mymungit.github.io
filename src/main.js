@@ -56,6 +56,7 @@ $(function() {
     running === false;
     initData();
     points = new Array();
+    window.location.reload();
   });
   $('#stop_btn').click(function() {
     if(running === false && currentGeneration !== 0){
