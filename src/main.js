@@ -35,6 +35,14 @@ $(function() {
     $('#status').text("");
     running = false;
   });
+  $('#start_greedy').click(function() { 
+    if(points.length >= 3) {
+	  solve();
+	  running = true;
+    } else {
+      alert("add some more points to the map!");
+    }
+  });
   $('#start_btn').click(function() { 
     if(points.length >= 3) {
       initData();
