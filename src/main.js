@@ -23,7 +23,9 @@ var fitnessValues;
 var roulette;
 var coordinate;
 var cities;
-
+var time;
+var t0;
+var t1;
 
 $(function() {
   init();
@@ -36,7 +38,8 @@ $(function() {
     running = false;
   });
   $('#start_greedy').click(function() { 
-    if(points.length >= 3) {
+    if(points.length >= 3) { 
+	  t0g = performance.now();
 	  solve();
 	  running = true;
     } else {
@@ -46,6 +49,7 @@ $(function() {
   $('#start_btn').click(function() { 
     if(points.length >= 3) {
       initData();
+	  t0 = performance.now();
       GAInitialize();
       running = true;
     } else {
@@ -53,10 +57,10 @@ $(function() {
     }
   });
   $('#clear_btn').click(function() {
+	window.location.reload();
     running === false;
     initData();
     points = new Array();
-    window.location.reload();
   });
   $('#stop_btn').click(function() {
     if(running === false && currentGeneration !== 0){
