@@ -192,11 +192,13 @@ function setBestValue() {
     UNCHANGED_GENS = 0;
   } else {
     UNCHANGED_GENS += 1;
-    if (UNCHANGED_GENS>50){
-		alert('converged at '+ bestValue);
+	if (UNCHANGED_GENS>30){
 		running = false;
-	}
+		t1 = performance.now();
+		time = t1 - t0
+		alert("converged distance: " + bestValue + " with Calculation time: " + Math.round(time) + " milliseconds.");
   }
+}
 }
 function getCurrentBest() {
   var bestP = 0,
