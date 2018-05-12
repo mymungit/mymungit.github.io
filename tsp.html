@@ -1,14 +1,17 @@
+<!DOCTYPE html>
 <html>
     <head>
 	<link rel="stylesheet" href="./css/style.css" />
 	<link rel="stylesheet" href="./css/bootstrap.min.css" />
-
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./lib/jquery-1.7.2.min.js"></script>
 	<script type="text/javascript" src="./src/main.js"></script>
 	<script type="text/javascript" src="./src/algorithm.js"></script>
 	<script type="text/javascript" src="./src/utils.js"></script>
 	<script type="text/javascript" src="./src/data.js"></script>
 	<script type="text/javascript" src="./src/greedy.js"></script>
+	<script type="text/javascript" src="./src/bruteforce.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.3.7/papaparse.min.js"></script>
     </head>
     <body>
 	<div class="container">
@@ -17,12 +20,15 @@
 	    </header>
 	    <div class="row-fluid">
 		<form action="" method="post">
-			Tambahkan Kota dan Koordinat contoh: Surakarta 100,321<br />
+			Tambahkan Kota dan Koordinat contoh: Surakarta 100,321  atau import file .csv yang berisi koordinat x pada kolom pertama dan y pada kolom kedua<br />
 			<input id="nama" type="text" name="city" />
 			<input id="koordinat" type="text" name="koordinat"
 			<p><a id="addPoint" class="btn" role="button">ADD</a> 
+				<input type="file" class="btn" id="my_file" accept=".csv"> 
+			
 		</form>
 		<div id="control_bottons" class="btn-group row">
+			<button id="start_brute" class="btn">Bruteforce</button>
 			<button id="start_greedy" class="btn">Greedy</button>
 		    <button id="start_btn" class="btn">Genetic</button>
 		    <button id="stop_btn" class="btn">Stop/Continue</button>
