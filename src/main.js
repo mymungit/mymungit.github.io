@@ -48,7 +48,7 @@ $(function() {
 			quoteChar: '"',
 			header: false,
 			complete: function(results, file) {
-				for(var i=0; i<results.data.length;i++){
+				for(var i=0; i<results.data.length-1;i++){
 					console.log(results.data[i]);
 					points.push({"x":parseInt(results.data[i][0]),"y":parseInt(results.data[i][1])});
 					//mob.push(results.data[i][1]); 
