@@ -50,10 +50,11 @@ $(function() {
 			complete: function(results, file) {
 				for(var i=0; i<results.data.length-1;i++){
 					console.log(results.data[i]);
-					points.push({"x":parseInt(results.data[i][0]),"y":parseInt(results.data[i][1])});
-					//mob.push(results.data[i][1]); 
+					points.push({"x":parseInt(results.data[i][1]),"y":parseInt(results.data[i][2])});
+					cities.push(results.data[i][0]);
+					 
 				}
-				//console.log(mob);
+				
 			}
 		}
 	});
@@ -87,9 +88,7 @@ $(function() {
     }
   });
   $('#clear_btn').click(function() {	  
-	
 	window.location.reload();
-	
     running === false;
     initData();
     points = new Array();
