@@ -26,6 +26,9 @@ var cities;
 var time;
 var t0;
 var t1;
+var mob = [];
+
+
 
 $(function() {
   init();
@@ -37,10 +40,37 @@ $(function() {
     $('#status').text("");
     running = false;
   });
+  $("#my_file").change(function(){
+	$("#my_file").parse({
+		config: {
+			delimiter: "",	// auto-detect
+			newline: "",	// auto-detect
+			quoteChar: '"',
+			header: false,
+			complete: function(results, file) {
+				for(var i=0; i<results.data.length;i++){
+					console.log(results.data[i]);
+					points.push({"x":parseInt(results.data[i][0]),"y":parseInt(results.data[i][1])});
+					//mob.push(results.data[i][1]); 
+				}
+				//console.log(mob);
+			}
+		}
+	});
+});
   $('#start_greedy').click(function() { 
     if(points.length >= 3) { 
 	  t0g = performance.now();
 	  solve();
+	  running = true;
+    } else {
+      alert("add some more points to the map!");
+    }
+  });
+  $('#start_brute').click(function() { 
+    if(points.length >= 3) { 
+	  t0g = performance.now();
+	  brute();
 	  running = true;
     } else {
       alert("add some more points to the map!");
@@ -56,8 +86,10 @@ $(function() {
       alert("add some more points to the map!");
     }
   });
-  $('#clear_btn').click(function() {
+  $('#clear_btn').click(function() {	  
+	
 	window.location.reload();
+	
     running === false;
     initData();
     points = new Array();
@@ -137,6 +169,8 @@ function addPoints() {
 	console.log(points);
 		 
 }
+
+
 function drawCircle(city,point) {
   ctx.fillStyle   = '#000';
   ctx.beginPath();
