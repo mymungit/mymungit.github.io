@@ -57,6 +57,6 @@ function brute(){
 	drawLines(best);
 	t1g = performance.now();
 	running = false;
-	alert("greedy distance: " +Math.round(min)+ " calculation time: "+ Math.round((t1g-t0g))+" milliseconds");
+	alert("bruteforce distance: " +Math.round(min)+", "+ " calculation time: "+ Math.round((t1g-t0g))+" milliseconds");
 	
 }
