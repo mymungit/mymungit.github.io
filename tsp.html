@@ -20,7 +20,7 @@
 	    </header>
 	    <div class="row-fluid">
 		<form action="" method="post">
-			Tambahkan Kota dan Koordinat contoh: Surakarta 100,321  atau import file .csv yang berisi nama kota pada kolom 1 koordinat x pada kolom 2 dan y pada kolom 3<br />
+			Tambahkan Kota dan Koordinat contoh: Surakarta 100,321  atau import file .csv yang berisi koordinat x pada kolom pertama dan y pada kolom kedua<br />
 			<input id="nama" type="text" name="city" />
 			<input id="koordinat" type="text" name="koordinat"
 			<p><a id="addPoint" class="btn" role="button">ADD</a> 
@@ -36,6 +36,7 @@
 		</div>
 		<div class="row">
 		    <span id="status" class="show-grid"></span>
+			<p class="show-grid">Result: <span id="result" class="show-grid"></span></p>
 		</div>
 		<canvas id="canvas" 
 		    width="1000" height="1000"
@@ -44,6 +45,7 @@
 		</canvas>
 	    </div>
 	</div>
+	
 	<footer>
     Source code available <a href="http://github.com/parano/GeneticAlgorithm-Solving-TSP">here</a>
 	</footer>
