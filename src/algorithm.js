@@ -196,6 +196,7 @@ function setBestValue() {
 		running = false;
 		t1 = performance.now();
 		time = t1 - t0
+		document.getElementById("result").innerHTML = best;
 		alert("converged distance: " + bestValue + " with Calculation time: " + Math.round(time) + " milliseconds.");
   }
 }
