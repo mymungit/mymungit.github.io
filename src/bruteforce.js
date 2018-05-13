@@ -1,6 +1,6 @@
 var permArr = [];
 var usedChars = [];
-var best = [];
+var tbest = [];
 
 
 function cost(jalur){
@@ -47,16 +47,22 @@ function brute(){
 		permArr[i].push(permArr[i][0]);
 	}
 	for(var i=0;i<permArr.length;i++){
+		
 		if(cost(permArr[i])<min){
 			min = cost(permArr[i]);
-			best = permArr[i];
-			
+			tbest = permArr[i];
+			drawLines(tbest);
+			clearCanvas();
+			for(var i=0; i<points.length; i++) {
+			  drawCircle(cities[i],points[i]);
+			}
 		}
 	}
 	console.log(best);
-	drawLines(best);
+	drawLines(tbest);
 	t1g = performance.now();
 	running = false;
-	alert("bruteforce distance: " +Math.round(min)+", "+ " calculation time: "+ Math.round((t1g-t0g))+" milliseconds");
+	document.getElementById("result").innerHTML = tbest;
+	alert("bruteforce distance: " +Math.round(min)+ " calculation time: "+ Math.round((t1g-t0g))+" milliseconds");
 	
 }
