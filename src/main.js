@@ -50,7 +50,7 @@ $(function() {
 			complete: function(results, file) {
 				for(var i=0; i<results.data.length-1;i++){
 					console.log(results.data[i]);
-					points.push({"x":parseInt(results.data[i][1]),"y":parseInt(results.data[i][2])});
+					points.push({"x":parseInt(results.data[i][1]),"y":1000-parseInt(results.data[i][2])});
 					cities.push(results.data[i][0]);
 					 
 				}
@@ -156,7 +156,7 @@ function addPoints() {
 	var nameValue = document.getElementById("nama").value;
 	var coorValue = document.getElementById("koordinat").value;
 	c = coorValue.split(",")
-	points.push({"x":parseInt(c[0]),"y":parseInt(c[1])});
+	points.push({"x":parseInt(c[0]),"y":1000-parseInt(c[1])});
 	if(!nameValue){
 		cities.push("");
 	}else{
