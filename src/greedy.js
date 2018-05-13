@@ -1,5 +1,4 @@
 
-
 function greedy(awal){
 	var jalur = [awal];
 	
@@ -53,5 +52,6 @@ function solve(){
 	drawLines(jalur);
 	t1g = performance.now();
 	running = false;
+	document.getElementById("result").innerHTML = jalur;
 	alert("greedy distance: " +Math.round(alldistance)+ " calculation time: "+ Math.round((t1g-t0g))+" milliseconds");
 }
