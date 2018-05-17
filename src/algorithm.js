@@ -197,8 +197,12 @@ function setBestValue() {
 		t1 = performance.now();
 		time = t1 - t0
 		document.getElementById("result").innerHTML = city_path(best)+","+city_path(best)[0];
-		best.push(best[0]);
-		document.getElementById("total_jarak").innerHTML = Math.round(cost(best));
+		lajur = [];
+		for(var i =0; i<best.length;i++){
+			lajur.push(best[i])
+		}
+		lajur.push(best[0])
+		document.getElementById("total_jarak").innerHTML = Math.round(cost(lajur));
 		document.getElementById("compute_time").innerHTML = Math.round(time) + " milliseconds.";
 		
   }
