@@ -1,25 +1,14 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>solver</title>
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-</head>
-<body>
 
-<div class="container">  
-	<h1> Solver <small>by mymung</small></h1>
-  <div class="jumbotron">
-		<h3> Choose problem </h3>
-		<a href="tsp.html" class="btn btn-info" role="button">Travelling Salesman Problem</a> 
-		
-	</div>
+<link rel="stylesheet" href="./css/login.css" />
+<script type="text/javascript" src="./lib/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="./src/login.js"></script>
+<script src="./src/md5.js"></script>
+
+  <div class="form">
+    <form class="login-form">
+      <input type="text" id = "userid" placeholder="username"/>
+      <input type="password" id = "pswrd" placeholder="password"/>
+      <button type="button" id="login" onclick=check(this.form) >login</button>
+    </form>
+  </div>
 </div>
-
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-</body>
-</html>
