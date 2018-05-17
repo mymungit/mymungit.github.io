@@ -122,6 +122,7 @@ function init_mouse() {
       x = evt.pageX - canvasMinX;
       y = evt.pageY - canvasMinY;
       points.push(new Point(x, y));
+	  cities.push(points.length);
     }
   });
 }
@@ -145,12 +146,7 @@ function initData() {
   fitnessValues = new Array(POPULATION_SIZE);
   roulette = new Array(POPULATION_SIZE);
 }
-function addRandomPoints(number) {
-  running = false;
-  for(var i = 0; i<number; i++) {
-    points.push(randomPoint());
-  }
-}
+
 function addPoints() {
 	running = false;
 	var nameValue = document.getElementById("nama").value;
@@ -217,4 +213,12 @@ function draw() {
 }
 function clearCanvas() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
+}
+
+function city_path(path){
+	var jalur = [];
+	for(var i=0;i<path.length;i++){
+		jalur.push(cities[path[i]]);
+	}
+	return jalur;
 }
