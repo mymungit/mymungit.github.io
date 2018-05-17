@@ -222,3 +222,9 @@ function city_path(path){
 	}
 	return jalur;
 }
+
+$("#lanjut").keyup(function(event) {
+    if (event.keyCode === 13) {
+        $("#lanjut").click();
+    }
+});
