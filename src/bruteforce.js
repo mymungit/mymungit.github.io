@@ -62,7 +62,10 @@ function brute(){
 	drawLines(tbest);
 	t1g = performance.now();
 	running = false;
-	document.getElementById("result").innerHTML = tbest;
-	alert("bruteforce distance: " +Math.round(min)+ " calculation time: "+ Math.round((t1g-t0g))+" milliseconds");
+	
+	document.getElementById("result").innerHTML = city_path(tbest);
+	document.getElementById("total_jarak").innerHTML = Math.round(min);
+	document.getElementById("compute_time").innerHTML = Math.round((t1g-t0g)) + " milliseconds.";
+	
 	
 }
