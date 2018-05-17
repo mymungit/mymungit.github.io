@@ -196,8 +196,10 @@ function setBestValue() {
 		running = false;
 		t1 = performance.now();
 		time = t1 - t0
-		document.getElementById("result").innerHTML = best +","+best[0];
-		alert("converged distance: " + bestValue + " with Calculation time: " + Math.round(time) + " milliseconds.");
+		document.getElementById("result").innerHTML = city_path(best)+","+city_path(best)[0];
+		document.getElementById("total_jarak").innerHTML = bestValue;
+		document.getElementById("compute_time").innerHTML = Math.round(time) + " milliseconds.";
+		
   }
 }
 }
