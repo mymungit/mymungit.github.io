@@ -197,7 +197,8 @@ function setBestValue() {
 		t1 = performance.now();
 		time = t1 - t0
 		document.getElementById("result").innerHTML = city_path(best)+","+city_path(best)[0];
-		document.getElementById("total_jarak").innerHTML = bestValue;
+		best.push(best[0]);
+		document.getElementById("total_jarak").innerHTML = Math.round(cost(best));
 		document.getElementById("compute_time").innerHTML = Math.round(time) + " milliseconds.";
 		
   }
