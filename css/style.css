@@ -3,6 +3,14 @@
     margin-top: 20px;
 }
 
+#result{
+	-moz-hyphens:auto;
+	ms-hyphens:auto;
+	-webkit-hyphens:auto;
+	hyphens:auto;
+	word-wrap:break-word;
+}
+
 #title {
     margin-top: 34px;
     font-size: 32px;
