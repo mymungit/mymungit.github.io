@@ -16,11 +16,17 @@
     <body>
 	<div class="container">
 	    <header>
-		<h1 id="title">Traveling Salesman Problem Using Bruteforce, Greedy and Genetic Algorithms</h1>
+		<h1 id="title">Traveling Salesman Problem Using Greedy and Genetic Algorithms</h1>
 	    </header>
 	    <div class="row-fluid">
 		<form action="" method="post">
-			Tambahkan Kota dan Koordinat contoh: Surakarta 100,321  atau import file .csv yang berisi koordinat x pada kolom pertama dan y pada kolom kedua<br />
+			Tambahkan <b>nama kota</b> dan <b>titik koordinat</b> pada kolom di bawah. <br> 
+			<i>contoh: Surakarta 100,321</i> <br> 
+			atau upload file .csv yang berisi nama kota pada kolom pertama, koordinat x pada kolom kedua, dan koordinat y pada kolom ketiga <br>
+			Anda juga dapat langsung memilih titik pada map<br>
+			<br>
+			Nama Kota  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Titik koordinat x,y
+			<br />
 			<input id="nama" type="text" name="city" />
 			<input id="koordinat" type="text" name="koordinat"
 			<p><a id="addPoint" class="btn" role="button">ADD</a> 
@@ -31,7 +37,6 @@
 			<button id="start_brute" class="btn">Bruteforce</button>
 			<button id="start_greedy" class="btn">Greedy</button>
 		    <button id="start_btn" class="btn">Genetic</button>
-		    <button id="stop_btn" class="btn">Stop/Continue</button>
 		    <button id="clear_btn" class="btn">Clear All</button>
 		</div>
 		<div class="row">
